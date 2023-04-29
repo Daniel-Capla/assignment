@@ -1,19 +1,21 @@
 public class main {
 
     public static void main(String[] args) {
-        countFizzBuzz(2,7,15);
+        System.out.println(countFizzBuzz(2,7,15));
     }
-    private static void countFizzBuzz(int x, int y, int n) {
+    private static String countFizzBuzz(int x, int y, int n) {
+        String result = "";
         for (int i = 1; i <= n; i++) {
             if (i % x == 0 && i % y == 0) {
-                System.out.print("FB ");
+                result += "FB ";
             } else if (i % y == 0) {
-                System.out.print("B ");
+                result += "B ";
             } else if (i % x == 0) {
-                System.out.print("F ");
+                result +="F ";
             } else {
-                System.out.print(i + " ");
+                result += (i + " ");
             }
         }
+        return result;
     }
 }
