@@ -1,5 +1,8 @@
 package org.example;
 
+import org.apache.ibatis.jdbc.ScriptRunner;
+
+import java.io.File;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,6 +13,7 @@ public class Database {
     private Connection connection;
 
     public Database() {
+        //read properties dynamically directly from a file
         Properties props = new Properties();
         try (FileReader fr = new FileReader(".properties")) {
             props.load(fr);
@@ -23,8 +27,12 @@ public class Database {
             throw new RuntimeException(e);
         }
 
-    public Database() {
-            connection = DriverManager.getConnection()
+        try {
+            FileReader sqlScript = new FileReader("db-properties.sql");
+            ScriptRunner scriptRunner = new ScriptRunner(connection);
+            scriptRunner.runScript(sqlScript);
+        } catch(Exception e) {
+            e.printStackTrace();
         }
     }
 }
