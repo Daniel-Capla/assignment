@@ -15,7 +15,7 @@ public class Database {
     public Database() {
         //read properties dynamically directly from a file
         Properties props = new Properties();
-        try (FileReader fr = new FileReader(".properties")) {
+        try (FileReader fr = new FileReader(".connection-properties")) {
             props.load(fr);
         } catch (Exception e) {
             e.printStackTrace();
