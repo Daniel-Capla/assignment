@@ -36,13 +36,14 @@ public class Database {
         preparedStatement.setString(2, user.getUSER_GUID());
         preparedStatement.setString(3, user.getUSER_NAME());
         preparedStatement.executeUpdate();
+        connection.commit();
     }
 
     public List<User> printAll() throws SQLException {
         List<User> allUsers = new ArrayList<>();
         PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM SUSERS");
         ResultSet resultSet = preparedStatement.executeQuery();
-        while (resultSet.next()) { // Replace the for loop with a while loop
+        while (resultSet.next()) {
             User user = new User(
                     resultSet.getInt("USER_ID"),
                     resultSet.getString("USER_GUID"),
