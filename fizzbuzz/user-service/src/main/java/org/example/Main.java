@@ -15,7 +15,10 @@ public class Main {
         UserDao userDao = new UserDao(db);
         UserService userService = new UserServiceImpl(userDao);
 
+        userService.deleteAll();
         userService.addUsers(userList);
+        userService.printAll();
+        userService.deleteAll();
         userService.printAll();
     }
 }

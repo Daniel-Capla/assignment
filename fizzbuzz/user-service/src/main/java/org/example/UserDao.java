@@ -17,4 +17,8 @@ public class UserDao {
     public List<User> printAll() throws SQLException {
         return db.printAll();
     }
+
+    public void deleteAll() throws SQLException {
+        db.deleteAll();
+    }
 }

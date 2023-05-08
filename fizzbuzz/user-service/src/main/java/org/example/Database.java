@@ -51,7 +51,18 @@ public class Database {
             );
             allUsers.add(user);
         }
-        System.out.println(allUsers);
+        if (allUsers.isEmpty()){
+            System.out.println("Table SUSERS is empty!");
+        } else {
+            allUsers.forEach(System.out::println);
+        }
+
         return allUsers;
+    }
+
+    public void deleteAll() throws SQLException {
+        PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM SUSERS");
+        preparedStatement.executeUpdate();
+        connection.commit();
     }
 }
