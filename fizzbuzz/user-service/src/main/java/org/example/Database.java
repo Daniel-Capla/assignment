@@ -16,6 +16,7 @@ public class Database {
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/users", "postgres", "password");
+            this.connection.setAutoCommit(true);
             System.out.println("Connected to the database!");
         } catch (SQLException | ClassNotFoundException e) {
             System.err.println(e.getMessage());
