@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
-public class Consumer implements Runnable{
+public class Consumer implements Runnable {
     private final BlockingQueue blockingQueue;
     private final UserDao userDao;
     private final List<User> userList;
@@ -17,14 +17,14 @@ public class Consumer implements Runnable{
 
     @Override
     public void run() {
-        try{
+        try {
             for (int i = 1; i <= userList.size(); i++) {
                 User user = (User) blockingQueue.take();
                 if (user.getUSER_ID() == -1) {
                     break;
                 }
                 System.out.println("Consuming: " + user);
-                try{
+                try {
                     userDao.addUser(user);
                 } catch (SQLException e) {
                     System.out.println("Could not add user on Dao: " + e.getMessage());

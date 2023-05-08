@@ -19,8 +19,8 @@ public class Producer {
                 userQueue.put(user);
             }
             //put predefined user with id -1 that will tell Consumer it's the end of the production
-            userQueue.put(new User(-1,"",""));
-        } catch(Exception e){
+            userQueue.put(new User(-1, "", ""));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

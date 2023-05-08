@@ -4,7 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class UserDao {
-    private Database db;
+    private final Database db;
 
     public UserDao(Database db) {
         this.db = db;
