@@ -3,13 +3,11 @@ package org.example;
 import org.apache.ibatis.jdbc.ScriptRunner;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Properties;
 
 public class Database {
@@ -28,7 +26,7 @@ public class Database {
         try {
             FileReader sqlScript = new FileReader("user-service//src//main//resources//.db-properties.sql");
             ScriptRunner scriptRunner = new ScriptRunner(connection);
-            System.out.println(sqlScript.toString());
+            System.out.println(sqlScript);
             scriptRunner.runScript(sqlScript);
         } catch (Exception e) {
             e.printStackTrace();
