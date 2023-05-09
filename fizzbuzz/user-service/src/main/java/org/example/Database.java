@@ -2,10 +2,15 @@ package org.example;
 
 import org.apache.ibatis.jdbc.ScriptRunner;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 public class Database {
     private Connection connection;
@@ -13,7 +18,7 @@ public class Database {
     public Database() {
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/users", "postgres", "password");
+            connection = DriverManager.getConnection(setUpConnection().getProperty("url"), setUpConnection().getProperty("username"), setUpConnection().getProperty("password"));
             this.connection.setAutoCommit(true);
             System.out.println("Connected to the database!");
         } catch (SQLException | ClassNotFoundException e) {
@@ -27,6 +32,17 @@ public class Database {
             scriptRunner.runScript(sqlScript);
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static Properties setUpConnection() {
+        try {
+            FileInputStream fis = new FileInputStream("user-service//src//main//resources//.connection-properties");
+            Properties props = new Properties();
+            props.load(fis);
+            return props;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 

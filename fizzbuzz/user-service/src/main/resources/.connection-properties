@@ -1,0 +1,5 @@
+driver=org.h2.Driver;
+url=jdbc:postgresql://localhost:5433/users
+sql=CREATE TABLE IF NOT EXISTS SUSERS (USER_ID INT PRIMARY KEY NOT NULL,USER_GUID VARCHAR(10) UNIQUE,USER_NAME VARCHAR(255));
+username=postgres
+password=password
