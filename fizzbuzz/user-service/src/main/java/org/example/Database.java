@@ -21,7 +21,7 @@ public class Database {
         }
 
         try {
-            FileReader sqlScript = new FileReader("C://Users//ZZ01O6693//Desktop//Dev Projects//On Top Projects//Bootiq//assignment//fizzbuzz//user-service//src//main//resources//.db-properties.sql");
+            FileReader sqlScript = new FileReader("user-service//src//main//resources//.db-properties.sql");
             ScriptRunner scriptRunner = new ScriptRunner(connection);
             System.out.println(sqlScript.toString());
             scriptRunner.runScript(sqlScript);
@@ -51,12 +51,11 @@ public class Database {
             );
             allUsers.add(user);
         }
-        if (allUsers.isEmpty()){
+        if (allUsers.isEmpty()) {
             System.out.println("Table SUSERS is empty!");
         } else {
             allUsers.forEach(System.out::println);
         }
-
         return allUsers;
     }
 
