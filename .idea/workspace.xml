@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e35005a5-366b-4cc2-831a-56b7597b3cca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.settings/org.eclipse.jdt.apt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/src/main/java/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/libs/postgresql-42.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/.connection-properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/java/org/example/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/src/main/resources/.db-properties.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/bin/user-service/target/classes/.db-properties.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/src/main/java/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/target/classes/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/uml-analysis/Bootiq.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/uml-analysis/use-case.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/Consumer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/Database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/Producer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/java/org/example/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/resources/.connection-properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/main/resources/.db-properties.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/src/test/java/org/example/DatabaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/.connection-properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/.db-properties.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/Consumer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/Database.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/Producer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/classes/org/example/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fizzbuzz/user-service/target/test-classes/org/example/DatabaseTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2P5lgH7xKERmrtapjy1LPRBxpxD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/ZZ01O6693/Desktop/Dev Projects/On Top Projects/Bootiq/assignment/bootiq-assignments"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e35005a5-366b-4cc2-831a-56b7597b3cca" name="Changes" comment="" />
+      <created>1682754932432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682754932432</updated>
+    </task>
+    <servers />
+  </component>
+</project>
