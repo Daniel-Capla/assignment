@@ -1,9 +1,9 @@
 package org.example;
 
 public class User {
-    private int USER_ID;
-    private String USER_GUID;
-    private String USER_NAME;
+    private final int USER_ID;
+    private final String USER_GUID;
+    private final String USER_NAME;
 
     public User(int USER_ID, String USER_GUID, String USER_NAME) {
         this.USER_ID = USER_ID;

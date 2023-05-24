@@ -10,6 +10,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 public class UserServiceImpl implements UserService {
 
+    private final Logger logger = LogManager.getLogger(UserServiceImpl.class);
     private final UserDao userDao;
     private final BlockingQueue<User> queue;
 
@@ -34,7 +35,8 @@ public class UserServiceImpl implements UserService {
             consumerThread.join();
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            throw new RuntimeException(e);
+            logger.error(e.getStackTrace());
+            e.printStackTrace();
         }
     }
 
@@ -44,12 +46,20 @@ public class UserServiceImpl implements UserService {
             return userDao.printAll();
         } catch (SQLException e) {
             System.out.println("Could not fetch users from DB");
-            throw new RuntimeException(e);
+            logger.error(e.getStackTrace());
+            e.printStackTrace();
         }
+        return null;
     }
 
     @Override
-    public void deleteAll() throws SQLException {
-        userDao.deleteAll();
+    public void deleteAll() {
+        try {
+            userDao.deleteAll();
+        } catch (SQLException e) {
+            logger.error(e.getStackTrace());
+            e.printStackTrace();
+        }
+
     }
 }

@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
 public class Producer {
-    private BlockingQueue<User> userQueue;
-
+    private final BlockingQueue<User> userQueue;
 
     public Producer(BlockingQueue<User> userQueue) {
         this.userQueue = userQueue;
