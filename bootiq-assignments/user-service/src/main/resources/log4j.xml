@@ -1,0 +1,10 @@
+<Configuration status="debug" name="my-config" packages="">
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %p %m%n"/>
+        </Console>
+    </Appenders>
+    <Root level="info">
+        <AppenderRef ref="stdout" level="info"/>
+    </Root>
+</Configuration>

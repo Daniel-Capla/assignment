@@ -1,17 +1,21 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class UserServiceImpl implements UserService {
+
     private final UserDao userDao;
     private final BlockingQueue<User> queue;
 
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
-        this.queue = new LinkedBlockingQueue<User>(10);
+        this.queue = new LinkedBlockingQueue<User>(3);
     }
 
     @Override

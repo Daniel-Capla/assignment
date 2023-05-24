@@ -1,6 +1,8 @@
 package org.example;
 
 import org.apache.ibatis.jdbc.ScriptRunner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
 import java.io.FileReader;
@@ -11,6 +13,8 @@ import java.util.List;
 import java.util.Properties;
 
 public class Database {
+    private final Logger logger = LogManager.getLogger(Database.class);
+
     private Connection connection;
 
     public Database() {
@@ -66,7 +70,8 @@ public class Database {
             allUsers.add(user);
         }
         if (allUsers.isEmpty()) {
-            System.out.println("Table SUSERS is empty!");
+            logger.error("Table SUSERS is empty!");
+
         } else {
             allUsers.forEach(System.out::println);
         }
