@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
@@ -24,7 +25,7 @@ public class Database {
             this.connection.setAutoCommit(true);
             System.out.println("Connected to the database!");
         } catch (SQLException | ClassNotFoundException e) {
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
 
         try {
@@ -32,7 +33,7 @@ public class Database {
             ScriptRunner scriptRunner = new ScriptRunner(connection);
             System.out.println(sqlScript);
             scriptRunner.runScript(sqlScript);
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -42,6 +43,7 @@ public class Database {
             FileInputStream fis = new FileInputStream("user-service//src//main//resources//.connection-properties");
             Properties props = new Properties();
             props.load(fis);
+            fis.close();
             return props;
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -69,11 +71,10 @@ public class Database {
             );
             allUsers.add(user);
         }
-        if (allUsers.isEmpty()) {
-            logger.error("Table SUSERS is empty!");
-
-        } else {
+        if (!allUsers.isEmpty()) {
             allUsers.forEach(System.out::println);
+        } else {
+            logger.error("Table SUSERS is empty!");
         }
         return allUsers;
     }
