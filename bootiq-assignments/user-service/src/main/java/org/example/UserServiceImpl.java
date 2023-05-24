@@ -47,9 +47,8 @@ public class UserServiceImpl implements UserService {
         } catch (SQLException e) {
             System.out.println("Could not fetch users from DB");
             logger.error(e.getStackTrace());
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return null;
     }
 
     @Override
