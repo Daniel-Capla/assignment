@@ -19,18 +19,14 @@ public class Consumer implements Runnable {
     public void run() {
         try {
             for (int i = 1; i <= userList.size(); i++) {
-                User user = (User) blockingQueue.take();
+                User user = blockingQueue.take();
                 if (user.getUSER_ID() == -1) {
                     break;
                 }
                 System.out.println("Consuming: " + user);
-                try {
-                    userDao.addUser(user);
-                } catch (SQLException e) {
-                    System.out.println("Could not add user on Dao: " + e.getMessage());
-                }
+                userDao.addUser(user);
             }
-        } catch (InterruptedException e) {
+        } catch (InterruptedException | SQLException e) {
             throw new RuntimeException(e);
         }
     }

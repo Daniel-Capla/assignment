@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class UserServiceImpl implements UserService {
+    static final int MAX_QUEUE_SIZE = 3;
 
     private final Logger logger = LogManager.getLogger(UserServiceImpl.class);
     private final UserDao userDao;
@@ -15,7 +16,7 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
-        this.queue = new LinkedBlockingQueue<User>(3);
+        this.queue = new LinkedBlockingQueue<User>(MAX_QUEUE_SIZE);
     }
 
     @Override
@@ -23,7 +24,13 @@ public class UserServiceImpl implements UserService {
         Producer producer = new Producer(queue);
         Consumer consumer = new Consumer(queue, userDao, userList);
 
-        Thread producerThread = new Thread(() -> producer.produceUsers(userList));
+        Thread producerThread = new Thread(() -> {
+            try {
+                producer.produceUsers(userList);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
         Thread consumerThread = new Thread(consumer);
 
         producerThread.start();
