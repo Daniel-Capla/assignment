@@ -47,4 +47,11 @@ class DatabaseTest {
         ));
         assertEquals(testUsers.toString(), dbMock.printAll().toString());
     }
+
+    @Test
+    void deleteAll() throws SQLException {
+        dbMock.deleteAll();
+        assertEquals(dbMock.printAll().size(), 0);
+
+    }
 }

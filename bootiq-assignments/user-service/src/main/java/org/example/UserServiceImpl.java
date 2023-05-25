@@ -5,14 +5,13 @@ import org.apache.logging.log4j.Logger;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class UserServiceImpl implements UserService {
 
     private final Logger logger = LogManager.getLogger(UserServiceImpl.class);
     private final UserDao userDao;
-    private final BlockingQueue<User> queue;
+    private final LinkedBlockingQueue<User> queue;
 
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
@@ -59,6 +58,5 @@ public class UserServiceImpl implements UserService {
             logger.error(e.getStackTrace());
             e.printStackTrace();
         }
-
     }
 }

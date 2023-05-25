@@ -1,12 +1,12 @@
 package org.example;
 
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class Producer {
-    private final BlockingQueue<User> userQueue;
+    private final LinkedBlockingQueue<User> userQueue;
 
-    public Producer(BlockingQueue<User> userQueue) {
+    public Producer(LinkedBlockingQueue<User> userQueue) {
         this.userQueue = userQueue;
     }
 

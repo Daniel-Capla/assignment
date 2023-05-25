@@ -2,14 +2,14 @@ package org.example;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class Consumer implements Runnable {
-    private final BlockingQueue blockingQueue;
+    private final LinkedBlockingQueue<User> blockingQueue;
     private final UserDao userDao;
     private final List<User> userList;
 
-    public Consumer(BlockingQueue blockingQueue, UserDao userDao, List<User> userList) {
+    public Consumer(LinkedBlockingQueue<User> blockingQueue, UserDao userDao, List<User> userList) {
         this.blockingQueue = blockingQueue;
         this.userDao = userDao;
         this.userList = userList;
